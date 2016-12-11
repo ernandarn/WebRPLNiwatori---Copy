@@ -1,0 +1,24 @@
+﻿@model WebRPLNiwatori.Models.Pengguna
+@{
+    ViewBag.Title = "Login";
+}
+<h2>Login Form</h2><br />
+@Html.Raw(TempData["pesan"])
+
+<form method="post" action="@Url.Action("Login","Pengguna")">
+    <div class="form-group">
+        <label for="Username">Username:</label>
+        <input type="text" name="Username" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="Password">Password:</label>
+        <input type="Password" name="Password" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="Role">Role:</label>
+        <input type="text" name="Role" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-default">Login</button>
+</form><br />
+@Html.Raw(ViewBag.Error)
+
