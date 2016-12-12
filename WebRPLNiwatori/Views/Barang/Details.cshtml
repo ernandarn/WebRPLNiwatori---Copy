@@ -54,7 +54,15 @@
 
         <dt>&nbsp;</dt>
         <dd>
-            <a href="~/Keranjang_Belanja/TambahCart/@Html.DisplayFor(model => model.Kode_Barang)" class="btn btn-danger btn-xs">Tambah ke Keranjang</a>
+            @if (User.IsInRole("Admin"))
+            {
+                <a href="~/Barang/Edit/@Html.DisplayFor(model => model.Kode_Barang)" class="btn btn-danger btn-xs">Tambah ke Keranjang</a>
+            }
+            else
+            {
+                <a href="~/Keranjang_Belanja/TambahCart/@Html.DisplayFor(model => model.Kode_Barang)" class="btn btn-danger btn-xs">Tambah ke Keranjang</a>
+            }
+
         </dd>
     </dl>
 </div>

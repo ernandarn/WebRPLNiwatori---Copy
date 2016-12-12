@@ -49,6 +49,34 @@
     </style>
 </head>
 <body>
+    @*<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+    </script>
+
+    <section>
+        <img class="mySlides" src="ayam.png"
+             style="width:100%">
+        <img class="mySlides" src="ayam4.png"
+             style="width:100%">
+        <img class="mySlides" src="ayam1.png"
+             style="width:100%">
+        <img class="mySlides" src="ayam2.png"
+             style="width:100%">
+    </section>*@
 
     <div class="container">
 
@@ -108,6 +136,7 @@
                 </p>
             </section>
         </div>
-    </div>
+        </div>
+    
 </body>
 </html>
